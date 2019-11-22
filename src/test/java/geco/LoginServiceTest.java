@@ -40,7 +40,7 @@ public class LoginServiceTest {
     }
 
     @Test
-    public void findAllLoginsStartingWithTest(){
+    public void findAllLoginsStartingWithTest() {
         //GIVEN
         List<String> expected = new ArrayList<String>();
         expected.add(loginsExistants[0]);
@@ -52,7 +52,7 @@ public class LoginServiceTest {
     }
 
     @Test
-    public void findAllLoginsTest(){
+    public void findAllLoginsTest() {
         //GIVEN
         List<String> expected = new ArrayList<String>();
         expected.add(loginsExistants[2]);
