@@ -42,4 +42,13 @@ public class LoginGeneratorTest {
         //THEN
         assertEquals("The login should be PDUR", "PDUR", login);
     }
+
+    @Test
+    public void ct(){
+        //WHEN
+        String login = loginGenerator.generateLoginForNomAndPrenom("Du", "Paul");
+        //THEN
+        assertEquals("The login should be PDU", "PDU", login);
+
+    }
 }
