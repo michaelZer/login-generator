@@ -3,6 +3,8 @@ package geco;
 import java.text.Normalizer;
 import java.util.regex.Pattern;
 
+import static java.lang.Math.min;
+
 /**
  * Classe representant un generateur de login
  */
@@ -35,7 +37,7 @@ public class LoginGenerator {
      */
     public String generateLoginForNomAndPrenom(String nom, String prenom) {
         String p = deAccent(prenom.substring(0,1).toUpperCase());
-        String n = deAccent(nom.substring(0,3).toUpperCase());
+        String n = deAccent(nom.substring(0, min(3, nom.length())).toUpperCase());
         String login = p+n ;
 
         if (loginService.loginExists(login)) {
